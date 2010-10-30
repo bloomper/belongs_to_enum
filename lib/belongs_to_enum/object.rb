@@ -1,7 +1,7 @@
 class Object
-  # adds methods to the metaclass
+  # adds methods to the singleton_class
   def meta_def name, &blk
-    metaclass.instance_eval do
+    singleton_class.instance_eval do
       define_method name, &blk
     end
   end
